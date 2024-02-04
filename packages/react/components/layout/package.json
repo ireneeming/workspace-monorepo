@@ -14,7 +14,8 @@
     "build": "yarn run clean && yarn run build:js && yarn run build:type && yarn run build:css",
     "build:js": "node build.js",
     "build:type": "yarn tsc --emitDeclarationOnly",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "dev": "yarn build:js --watch && warn build:type --watch"
   },
   "devDependencies": {
     "@mingure/esbuild-config": "workspace:^",
